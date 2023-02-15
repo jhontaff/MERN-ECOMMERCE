@@ -1,31 +1,24 @@
-import data from "./data";
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import Home from './screens/Home';
+import ProductView from './screens/ProductView';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a href="/">TIF Store</a>
-      </header>
-      <main>
-      <h1>Lista de Productos</h1>
-      <div className="products">
-      { data.products.map((product) =>(
-        <div className="product" key = {product.slug}>
-          <a href={`/product/${product.slug}`}>
-            <img src={product.image} alt={product.name}/>
-          </a>
-          <div className = "product-info">
-          <a href={`/product/${product.slug}`}>
-          <p> {product.name} </p>
-          </a>
-          <p><strong> $ {product.price} </strong></p>
-          <button>Añadir al carrito</button>
-          </div> 
-      </div>))
-      }
+    <BrowserRouter>
+      {' '}
+      {/* uso del react-router-dom  package para realizar rutas*/}
+      <div>
+        <header>
+          <Link to="/">TIF Store</Link>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:slug" element={<ProductView />} />
+          </Routes>
+        </main>
       </div>
-      </main>
-    </div>
+    </BrowserRouter>
   );
 }
 
