@@ -1,10 +1,21 @@
+import data from "./data";
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <a href="/">TIF Store</a>
       </header>
-      <main> Hola mundo </main>
+      <main>
+      <h1>Lista de Productos</h1>
+      { data.products.map((product) =>(
+      <div>
+          <img src={product.image} alt={product.name}/>
+          <p> {product.name} </p>
+          <p> {product.price} </p>    
+      </div>))
+      }
+      </main>
     </div>
   );
 }
