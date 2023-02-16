@@ -1,22 +1,34 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './screens/Home';
 import ProductView from './screens/ProductView';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function App() {
   return (
     <BrowserRouter>
-      {' '}
-      {/* uso del react-router-dom  package para realizar rutas*/}
-      <div>
+      <div className="d-flex flex-column site-container">
         <header>
-          <Link to="/">TIF Store</Link>
+          <Navbar bg="dark" variant="dark">
+            <Container>
+              <LinkContainer to="/">
+                <Navbar.Brand>TIF Store</Navbar.Brand>
+              </LinkContainer>
+            </Container>
+          </Navbar>
         </header>
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/product/:slug" element={<ProductView />} />
-          </Routes>
+          <Container>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/product/:slug" element={<ProductView />} />
+            </Routes>
+          </Container>
         </main>
+        <footer>
+          <div className="text-center">Derechos reservados</div>
+        </footer>
       </div>
     </BrowserRouter>
   );
