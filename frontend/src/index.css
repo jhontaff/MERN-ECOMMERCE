@@ -31,6 +31,10 @@ main {
   max-width: 400px;
 }
 
+.rating span {
+  color: rgb(196, 171, 28);
+}
+
 .product-info {
   padding: 1rem;
 }

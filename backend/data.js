@@ -17,7 +17,7 @@ const data = {
     },
 
     {
-      name: 'Switch TP-Link LS1005G serie LiteWave',
+      name: 'Switch TP-Link LS1005G',
       slug: 'switch-tp-link-ls1005g-lite-wave',
       category: 'Switches',
       image: '/img/sw-tpl-ls.png',
@@ -31,7 +31,7 @@ const data = {
     },
 
     {
-      name: 'Cisco Business Cbs350-48t-4g Managed Switch',
+      name: 'Switch Cisco Cbs350-48t',
       slug: 'cisco-cbs350-48t-4g-switch',
       category: 'Switches',
       image: '/img/sw-cs-cbs.png',
@@ -74,7 +74,7 @@ const data = {
     //Routers
 
     {
-      name: 'Router Tenda AC8 negro 100V/240V',
+      name: 'Router Tenda AC8 100V/240V',
       slug: 'router-tenda-ac8-negro',
       category: 'Routers',
       image: '/img/rt-td-ac8.png',
@@ -102,7 +102,7 @@ const data = {
     },
 
     {
-      name: 'Router Asus V2 RT-AC1200_V2 negro 110V/240V',
+      name: 'Router Asus AC1200_V2',
       slug: 'router-asus-v2-rt-ac1200',
       category: 'Routers',
       image: '/img/rt-as-ac12.png',
@@ -116,7 +116,7 @@ const data = {
     },
 
     {
-      name: 'Router Gamer Asus Rapture Gt-ac2900',
+      name: 'Router Asus Gt-ac2900',
       slug: 'router-gamer-asus-rapture-gt-ac29',
       category: 'Routers',
       image: '/img/rt-as-gamer.png',
@@ -131,7 +131,7 @@ const data = {
 
     //RADIOS
     {
-      name: 'Cambium Networks Epmp 5 Ghz Force 300-16 Radio',
+      name: 'Radio CN Epmp Force 300-16',
       slug: 'cambium-network-epmp-5-ghz-force-300-16-radio',
       category: 'Radios',
       image: '/img/rad-cn-300.png',
@@ -145,7 +145,7 @@ const data = {
     },
 
     {
-      name: 'Radio Tenda O3 Radio Enlace 5km Cpe 2.4 Ghz',
+      name: 'Radio Tenda-O3',
       slug: 'radio-tenda-o3',
       category: 'Radios',
       image: '/img/rad-td-03.png',
@@ -160,7 +160,7 @@ const data = {
 
     //ANTENAS
     {
-      name: 'Antena Ubiquiti Powerbeam 5 Ghz 25 km',
+      name: 'Antena Ubiquiti Powerbeam',
       slug: 'antena-ubiquiti-powerbeam',
       category: 'Antenas',
       image: '/img/at-ub-pb.png',
@@ -174,7 +174,7 @@ const data = {
     },
 
     {
-      name: 'Litebeam Lbe-m5-23 Airmax Antena Ubiquiti',
+      name: 'Antena Ubiquiti Litebeam',
       slug: 'antena-litebeam-m5-23-ubiquiti',
       category: 'Antenas',
       image: '/img/at-ub-lb.png',
@@ -188,7 +188,7 @@ const data = {
     },
 
     {
-      name: 'Antena Satelital Banda Ku 75cm Lnb Universal',
+      name: 'Antena Satelital Lnb Universal',
       slug: 'antena-satelital-movi-lnb-universal',
       category: 'Antenas',
       image: '/img/at-mv-sat.png',
@@ -202,7 +202,7 @@ const data = {
     },
 
     {
-      name: 'Antena Satelital Eurostars 90 Cm Banda Ku',
+      name: 'Antena Satelital Eurostars',
       slug: 'antena-satelital-eurostars-90-cm',
       category: 'Antenas',
       image: '/img/at-eu-sat.png',
