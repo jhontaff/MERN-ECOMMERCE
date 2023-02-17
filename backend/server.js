@@ -7,6 +7,15 @@ app.get('/api/products', (req, res) => {
   res.send(data.products); /* Envía de vuelta datos al front */
 });
 
+app.get('/api/products/slug/:slug', (req, res) => {
+  const product = data.products.find((x) => x.slug === req.params.slug);
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send({ message: 'Producto inexistente' });
+  }
+});
+
 const port =
   process.env.PORT ||
   5000; /* Definir el puerto que va a responder al backend */
