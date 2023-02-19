@@ -3,6 +3,7 @@ const data = {
     //SWITCHES
 
     {
+      _id: '1',
       name: 'Switch TP-Link TL-SG1024DE',
       slug: 'switch-tp-link-sg1024de',
       category: 'Switches',
@@ -17,6 +18,7 @@ const data = {
     },
 
     {
+      _id: '2',
       name: 'Switch TP-Link LS1005G',
       slug: 'switch-tp-link-ls1005g-lite-wave',
       category: 'Switches',
@@ -31,6 +33,7 @@ const data = {
     },
 
     {
+      _id: '3',
       name: 'Switch Cisco Cbs350-48t',
       slug: 'cisco-cbs350-48t-4g-switch',
       category: 'Switches',
@@ -45,6 +48,7 @@ const data = {
     },
 
     {
+      _id: '4',
       name: 'Cisco Sf300-08',
       slug: 'cisco-sf300-08',
       category: 'Switches',
@@ -58,6 +62,7 @@ const data = {
     },
 
     {
+      _id: '5',
       name: 'Netgear Gs316 16-port Switch',
       slug: 'netgear-gs316-16-port-switch',
       category: 'Switches',
@@ -74,6 +79,7 @@ const data = {
     //Routers
 
     {
+      _id: '6',
       name: 'Router Tenda AC8 100V/240V',
       slug: 'router-tenda-ac8-negro',
       category: 'Routers',
@@ -88,6 +94,7 @@ const data = {
     },
 
     {
+      _id: '7',
       name: 'Router Tenda F3 blanco',
       slug: 'router-tenda-f3-blanco',
       category: 'Routers',
@@ -102,6 +109,7 @@ const data = {
     },
 
     {
+      _id: '8',
       name: 'Router Asus AC1200_V2',
       slug: 'router-asus-v2-rt-ac1200',
       category: 'Routers',
@@ -116,6 +124,7 @@ const data = {
     },
 
     {
+      _id: '9',
       name: 'Router Asus Gt-ac2900',
       slug: 'router-gamer-asus-rapture-gt-ac29',
       category: 'Routers',
@@ -131,6 +140,7 @@ const data = {
 
     //RADIOS
     {
+      _id: '10',
       name: 'Radio CN Epmp Force 300-16',
       slug: 'cambium-network-epmp-5-ghz-force-300-16-radio',
       category: 'Radios',
@@ -145,6 +155,7 @@ const data = {
     },
 
     {
+      _id: '11',
       name: 'Radio Tenda-O3',
       slug: 'radio-tenda-o3',
       category: 'Radios',
@@ -160,6 +171,7 @@ const data = {
 
     //ANTENAS
     {
+      _id: '12',
       name: 'Antena Ubiquiti Powerbeam',
       slug: 'antena-ubiquiti-powerbeam',
       category: 'Antenas',
@@ -174,6 +186,7 @@ const data = {
     },
 
     {
+      _id: '13',
       name: 'Antena Ubiquiti Litebeam',
       slug: 'antena-litebeam-m5-23-ubiquiti',
       category: 'Antenas',
@@ -188,6 +201,7 @@ const data = {
     },
 
     {
+      _id: '14',
       name: 'Antena Satelital Lnb Universal',
       slug: 'antena-satelital-movi-lnb-universal',
       category: 'Antenas',
@@ -202,6 +216,7 @@ const data = {
     },
 
     {
+      _id: '15',
       name: 'Antena Satelital Eurostars',
       slug: 'antena-satelital-eurostars-90-cm',
       category: 'Antenas',

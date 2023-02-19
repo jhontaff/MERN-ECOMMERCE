@@ -1,14 +1,18 @@
 import axios from 'axios';
-import { useEffect, useReducer } from 'react';
+import { useContext, useEffect, useReducer } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Rating from '../components/Rating';
 import Button from 'react-bootstrap/esm/Button';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import { getError } from './Utils';
+import { Store } from '../Store';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -24,6 +28,7 @@ const reducer = (state, action) => {
 };
 
 function ProductView() {
+  const navegar = useNavigate();
   const params = useParams();
   const { slug } = params;
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
@@ -38,15 +43,35 @@ function ProductView() {
         const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
     };
     fetchData();
   }, [slug]);
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart } = state;
+
+  const addToCartHandler = async () => {
+    const existItem = cart.cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.inStock < quantity) {
+      window.alert('Lo sentimos. No hay suficientes productos en inventario');
+      return;
+    }
+
+    ctxDispatch({
+      type: 'AGREGAR_PRODUCTO_CARRITO',
+      payload: { ...product, quantity },
+    });
+
+    navegar('/cart');
+  };
   return loading ? (
-    <div>CARGANDO...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
       <Row>
@@ -103,7 +128,9 @@ function ProductView() {
                 {product.inStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button variant="primary">Añadir al carrito</Button>
+                      <Button onClick={addToCartHandler} variant="primary">
+                        Añadir al carrito
+                      </Button>
                     </div>
                   </ListGroup.Item>
                 )}
