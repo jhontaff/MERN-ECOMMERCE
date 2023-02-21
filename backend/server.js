@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
 import productRouter from './routes/productRoutes.js';
+import userRouter from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -19,36 +20,17 @@ mongoose
   });
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
-// app.get('/api/products', (req, res) => {
-//   /* Los paramétrode get son url del servidor, función a ejecutarse al ir al url */
-//   res.send(data.products); /* Envía de vuelta datos al front */
-// });
+app.use('/api/users', userRouter);
 
-app.get('/api/products/slug/:slug', (req, res) => {
-  const product = data.products.find((x) => x.slug === req.params.slug);
-  if (product) {
-    res.send(product);
-  } else {
-    res.status(404).send({ message: 'Este Producto No Existe' });
-  }
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
 });
 
-app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find((x) => x._id === req.params.id);
-  if (product) {
-    res.send(product);
-  } else {
-    res.status(404).send({ message: 'Este Producto No Existe' });
-  }
-  console.log(req.params);
-});
-
-const port =
-  process.env.PORT ||
-  5000; /* Definir el puerto que va a responder al backend */
-
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`servidor en http://localhost:${port}`);
 }); /* Se inicializa el servidor y queda listo para responder al frontend. 
