@@ -13,6 +13,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import CartView from './screens/CartView';
 import SigninView from './screens/SigninView';
+import SignupView from './screens/SignupView';
+import PaymentMethodView from './screens/PaymentMethodView';
+import PlaceOrderView from './screens/PlaceOrderView';
 import ShippingAdressView from './screens/ShippingAddresView';
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
   };
   return (
     <BrowserRouter>
@@ -66,7 +70,7 @@ function App() {
                 ) : (
                   <Link className="nav-link" to="/signin">
                     {' '}
-                    Iniciar Sesión{' '}
+                    Hola!, Identificate{' '}
                   </Link>
                 )}
               </Nav>
@@ -79,8 +83,11 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product/:slug" element={<ProductView />} />
               <Route path="/signin" element={<SigninView />} />
-              <Route path="/shipping" element={<ShippingAdressView />} />
+              <Route path="/signup" element={<SignupView />} />
               <Route path="/cart" element={<CartView />} />
+              <Route path="/payment" element={<PaymentMethodView />} />
+              <Route path="/shipping" element={<ShippingAdressView />} />
+              <Route path="/placeorder" element={<PlaceOrderView />} />
             </Routes>
           </Container>
         </main>
