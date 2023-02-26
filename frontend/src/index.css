@@ -60,3 +60,27 @@ main {
   border-bottom: 0.2rem solid #0b71d6;
   color: #066adc;
 }
+
+/* sidebar */
+
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #262727;
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
