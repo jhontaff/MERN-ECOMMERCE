@@ -41,19 +41,9 @@ export default function PaymentMethodView() {
             <Form.Check
               type="radio"
               id="Paypal"
-              label="Paypal"
+              label="Paypal / Tarjeta"
               value="Paypal"
               checked={paymentMethodName === 'Paypal'}
-              onChange={(e) => setPaymentMethod(e.target.value)}
-            />
-          </div>
-          <div className="mb-3">
-            <Form.Check
-              type="radio"
-              id="Tarjeta"
-              label="Tarjeta"
-              value="Tarjeta"
-              checked={paymentMethodName === 'Tarjeta'}
               onChange={(e) => setPaymentMethod(e.target.value)}
             />
           </div>
