@@ -24,6 +24,7 @@ import Button from 'react-bootstrap/Button';
 import { getError } from './screens/Utils';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
+import SearchView from './screens/SearchView';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -135,7 +136,10 @@ function App() {
             {categories.map((category) => (
               <Nav.Item key={category}>
                 <LinkContainer
-                  to={`/search/category=${category}`}
+                  to={{
+                    pathname: '/search',
+                    search: `?category=${category}`,
+                  }}
                   onClick={() => setSidebarIsOpen(false)}
                 >
                   <Nav.Link>{category}</Nav.Link>
@@ -153,6 +157,7 @@ function App() {
               <Route path="/signup" element={<SignupView />} />
               <Route path="/profile" element={<ProfileView />} />
               <Route path="/cart" element={<CartView />} />
+              <Route path="/search" element={<SearchView />} />
               <Route path="/payment" element={<PaymentMethodView />} />
               <Route path="/shipping" element={<ShippingAdressView />} />
               <Route path="/placeorder" element={<PlaceOrderView />} />

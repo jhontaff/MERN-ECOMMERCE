@@ -28,7 +28,7 @@ const data = {
       price: 91,
       inStock: 10,
       brand: 'TP-Link',
-      rating: 4.5,
+      rating: 3.5,
       numReviewes: 10,
       description:
         'Tipo de telecomunicación: Store and forward. Capacidad de conmutación: 48 Gbps. Incluye: 24 puertos RJ-45. Tiene 294 mm de ancho, 44 mm de alto y 180 mm de profundidad. Se puede colocar en la pared o instalar fácilmente en el escritorio. Práctico tanto para uso personal como profesional.',
@@ -43,7 +43,7 @@ const data = {
       price: 50,
       inStock: 7,
       brand: 'TP-Link',
-      rating: 3.9,
+      rating: 2.9,
       numReviewes: 12,
       description:
         'Tipo de telecomunicación: Store and forward. Capacidad de conmutación: 10 Gbps. Incluye: 5 puertos RJ-45. Tiene 90 mm de ancho, 23 mm de alto y 72 mm de profundidad. Se puede instalar fácilmente en el escritorio. Práctico tanto para uso personal como profesional. ',
@@ -58,7 +58,7 @@ const data = {
       price: 999,
       inStock: 0,
       brand: 'Cisco',
-      rating: 4.7,
+      rating: 1.7,
       numReviewes: 9,
       description:
         'Comparte archivos, impresoras y conexión a Internet con múltiples equipos simultáneamente.Gracias a Cisco Designed Cbs350-48t-4g-na, podrás conectar diferentes dispositivos a través de sus puertos y optimizar su rendimiento, velocidad y seguridad.',
@@ -104,7 +104,7 @@ const data = {
       price: 42,
       inStock: 9,
       brand: 'Tenda',
-      rating: 4.4,
+      rating: 3.4,
       numReviewes: 26,
       description:
         'Con el router Tenda AC8 podrás establecer redes potentes para enviar y recibir información a gran velocidad. Con este equipo inalámbrico podrás desplazarte con total libertad por tu casa u oficina y disfrutar de la conexión sin estar pendiente de los cables. Con este dispositivo, las paredes y techos no son un obstáculo: los múltiples receptores garantizan un mejor rendimiento en lugares con gran nivel de interferencia',
@@ -119,7 +119,7 @@ const data = {
       price: 24,
       inStock: 18,
       brand: 'Tenda',
-      rating: 4.5,
+      rating: 2.5,
       numReviewes: 10,
       description:
         'Conexión inalámbrica. Ofrece una velocidad de 300Mbps. Banda única de 2.4 GHz. Posee 3 antenas externas. Tiene 4 puertos para conectarse. Dispositivo que facilita conexión a la red.',
@@ -180,7 +180,7 @@ const data = {
       price: 104,
       inStock: 8,
       brand: 'Tenda',
-      rating: 3.8,
+      rating: 2.8,
       numReviewes: 9,
       description:
         'O3 2.4GHz Outdoor CPE está diseñado para soluciones WISP CPE y soluciones de red inalámbrica de larga distancia para video vigilancia y transmisión de datos. Cuenta con una antena direccional de 12dBi para proporcionar una manera eficiente de captar y mantener una señal estable para una red inalámbrica. Adopta la tecnología de puente automático, dos CPE pueden conectarse entre sí automáticamente para facilitar la configuración.',
@@ -211,7 +211,7 @@ const data = {
       price: 84,
       inStock: 0,
       brand: 'Ubiquiti',
-      rating: 4.2,
+      rating: 2.2,
       numReviewes: 7,
       description:
         'Antena direccional de alta ganancia: El LiteBeam M provee de 23 dBi de ganancia para largas distancias y usa un patrón direccional mejorado para evitar ruidos. Diseño industrial que rompe moldes: Se ajusta en segundos sin necesidad de herramientas. Tamaño compacto, muy ligero y a un precio muy competitivo.',
